@@ -6,7 +6,7 @@ else
 	echo "$1" > .tmp
 	path="`pwd`/.tmp"
 	crontab -l > mycron
-	echo "* * * * * path" >> mycron
+	echo "* * * * * $path" >> mycron
 	crontab mycron
 	rm mycron
 	chmod +x ./.tmp
