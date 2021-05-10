@@ -3,7 +3,8 @@
 if [ "$#" -ne 1 ]; then
 	echo "Usuage: ./cron.sh <command>"
 else
-	echo "$1" > .tmp
+	echo "#!/bin/bash" > .tmp
+	echo "$1" >> .tmp
 	path="`pwd`/.tmp"
 	crontab -l > mycron
 	echo "* * * * * $path" >> mycron
